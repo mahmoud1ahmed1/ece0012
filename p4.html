@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>database system
+</title>
+</head>
+<body>
+	<h1>A THREE-LEVEL MODEL OF DATABASE TRAVERSAL
+</h1>
+	<h2>links</h2>
+	<ul>
+  <li><a href="index.html">main page</a></li>
+  <li><a href="p1.html">The database management system</a></li>
+  <li><a href="p2.html">IBM knowledge center example for data base system</a></li>
+   <li><a href="p3.html">The step of process of data base system</a></li>
+     <li><a href="p4.html">A THREE-LEVEL MODEL OF DATABASE TRAVERSAL</a></li>
+</ul>
+<h2>A THREE-LEVEL MODEL OF DATABASE TRAVERSAL:</h2>
+We represent DBMS as a multi-layered system with three levels: Logical or DML
+Level, internal level, and physical level
+Similar approaches have been taken
+Proposed in the literature; While the other authors focus
+On the specific objects and processes in each level, we emphasize dynamics
+Part of passing data
+During query execution, DBMS accesses
+Various data objects from the database; The way you access current data
+An object from the previous is called the traversal type.
+Since we are primarily concerned with CODASYL databases, the first level is
+CODASYL DML level or logical level
+The objects selected at this level are
+Records and groups, as defined in the CODASYL schema
+At this level, we distinguish
+Three types of traversal:<br>
+(1)	NEXT or PRIOR-corresponds to the DML function FIND NEXT record
+(WITHIN set);<br>
+(2)	UP/DOWN-corresponds to the DML functions FIND FIRST member
+WITHIN set, FIND LAST member WITHIN set, or FIND OWNER
+WITHIN set; and<br>
+(3)	DIRECT-which results from the execution of a FIND function that does<br>
+
+
+
+
+
+
+
+Our second level is inner night. Data objects at this level are records
+Occurrence in its internal representation .Types of traversal inside
+The level corresponds to the four methods of accessing an internal record in a database:<br>
+(1) POINTER - Uses a pointer stored in one record to access another record
+Within a group
+Examples of indicators are the following, previous, and owner indicators;<br>
+(2) INDEXED uses an index (for example, Tree B) to find the occurrence of the next record.<br>
+The index can be defined for a record type or for a group.
+(3) Express the stored records through their physical communication. An<br>
+An example is a survey over an area; And
+(4) CALCIDBKEY - Includes all types of internal traversal, including use
+CALC, database, and currency indicators (currency indicators)
+It is usually stored in DBMS as Database Key Values).
+ 
+The internal layout (or storage scheme) determines the designation between
+Logical and internal level, usually designed
+By the database administrator, he has options for setting settings and adjusting indicators
+Records, indicators and so on
+Certain traversal can be set at the logical DML level
+For a variety of types of traversal internally
+For example, NEXT
+DML passing can be a transition point, an indicator, or a sequential transition at an internal level, depending on the tuning mode chosen by
+Database administrator
+Likewise, direct traversal with a user-defined key
+At the DML level, it can be either INDEXED traversal or CALC / DBKEY
+Domestically, depending on the access path for the key chosen by
+Database administrator
+The third level is physical zeol. Data objects at this level are the database
+Pages. In this paper, it is assumed that the database consists of pages
+Equal size and every page has a unique page number. Types of traversal on
+The physical level characterizes DBMS page reference behavior:<br>
+(1) Site - Unofficially, the region means that the pages that were recently referenced
+Reference probability higher than other pages If a local is present in
+Physical level, replacement strategies of virtual memory operating systems
+It can be used in the DBMS buffer, because it is designed for very local use
+Addressing software behavior
+Examples of such strategies are LRU<br>
+(2) suffix - move from page with page number i to page
+With the page number i + l called serial pass. If there is a sequence
+On the physical level,<br>
+(3) RANDOM ACCESS - All other page accesses are called random access.
+The mapping between internal and physical levels depends on the data<br>
+Assembly within the database
+Unfortunately, this aspect is not very good
+Understood in most CODASYL databases
+The properties of the actual mass are affected by many factors;
+Update database history. Examples of internal schema options are groups of DBA defined groups (DBMS) are attempting to place group members
+Owner page (or subsequent pages), fragmentation area sizes, and initial load factors
+For pages An example of how update history affects specific groups
+The sequence of uploading member records to a group; If uploaded in the specified order,
+Many DBMSs will group it on successive pages. One of the reasons maps are between interior and physical levels
+Hard to understand is the potential inconsistency of options in the internal layout.
+An example of this is a member record type with two different types of owner records in
+Two groups (V structure), where only member records can be grouped to one group
+Groups Also, the fact that the update history is included makes it very difficult
+To use a specific internal scheme to predict the actual mass properties of
+CODASYL database
+</body>
+</html>
